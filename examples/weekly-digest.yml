@@ -15,7 +15,6 @@ on:
 permissions:
   contents: read
   pull-requests: read
-  issues: read
   discussions: write
 
 jobs:
@@ -23,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Post weekly digest
-        uses: your-org/community-digest-action@v0
+        uses: malmichaels-gif/community-digest-action@v0
         with:
           discussion_category: "Weekly Updates"
 
