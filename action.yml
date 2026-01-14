@@ -1,10 +1,10 @@
 name: 'Community Digest Action'
-description: 'Posts a clean weekly digest to GitHub Discussions'
-author: 'Your Name'
+description: 'A weekly heartbeat for your repo — posts merged PRs and new contributor shoutouts to GitHub Discussions'
+author: 'HeyTC Labs'
 
 branding:
-  icon: 'message-circle'
-  color: 'purple'
+  icon: 'activity'
+  color: 'orange'
 
 inputs:
   discussion_category:

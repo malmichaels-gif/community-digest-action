@@ -172,3 +172,7 @@ Please do. See [CONTRIBUTING.md](CONTRIBUTING.md). Agent instructions live in [A
 ## License
 
 MIT.
+
+---
+
+Built by [HeyTC Labs](https://heytc.com)
