@@ -1,0 +1,37 @@
+# Example workflow: Weekly Community Digest
+# Copy this file to .github/workflows/weekly-digest.yml in your repo
+
+name: Weekly Community Digest
+
+on:
+  schedule:
+    # Runs at 16:00 UTC every Monday
+    # Adjust the time to fit your community's timezone
+    - cron: "0 16 * * 1"
+
+  # Allow manual triggering for testing
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pull-requests: read
+  issues: read
+  discussions: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post weekly digest
+        uses: your-org/community-digest-action@v0
+        with:
+          discussion_category: "Weekly Updates"
+
+          # Optional: tune these for your repo size
+          # since_days: "7"
+          # max_prs: "10"
+          # max_new_contributors: "10"
+          # min_activity: "3"
+
+          # Optional: test without posting
+          # dry_run: "true"
