@@ -18,6 +18,8 @@ Posts a clean weekly digest to **GitHub Discussions** so your community stays in
 
 *Above: a real digest post from this Action running on [agent-instructions-kit](https://github.com/malmichaels-gif/agent-instructions-kit).*
 
+**Live example:** [Weekly Digest — 2026-01-14](https://github.com/malmichaels-gif/agent-instructions-kit/discussions/5)
+
 ---
 
 ## Example Output
