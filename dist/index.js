@@ -30028,7 +30028,7 @@ async function fetchDigestData(token, config) {
 }
 async function fetchMergedPRs(gql, config, since) {
     const query = `
-    query($owner: String!, $repo: String!, $since: DateTime!) {
+    query($owner: String!, $repo: String!) {
       repository(owner: $owner, name: $repo) {
         pullRequests(
           first: 100
@@ -30052,7 +30052,6 @@ async function fetchMergedPRs(gql, config, since) {
     const response = await gql(query, {
         owner: config.owner,
         repo: config.repo,
-        since: since.toISOString(),
     });
     return response.repository.pullRequests.nodes
         .filter((pr) => pr.mergedAt && new Date(pr.mergedAt) >= since)
@@ -30086,9 +30085,9 @@ async function findNewContributors(gql, config, mergedPRs) {
     }
     return newContributors;
 }
-async function isFirstTimeContributor(gql, config, author, mergedAt) {
+async function isFirstTimeContributor(gql, config, author, _mergedAt) {
     const query = `
-    query($owner: String!, $repo: String!, $author: String!, $before: DateTime!) {
+    query($owner: String!, $repo: String!, $author: String!) {
       repository(owner: $owner, name: $repo) {
         pullRequests(
           first: 1
@@ -30105,7 +30104,6 @@ async function isFirstTimeContributor(gql, config, author, mergedAt) {
             owner: config.owner,
             repo: config.repo,
             author,
-            before: mergedAt,
         });
         // If they have exactly 1 merged PR total, this is their first
         return response.repository.pullRequests.totalCount === 1;

@@ -67,7 +67,7 @@ async function fetchMergedPRs(
   since: Date
 ): Promise<MergedPR[]> {
   const query = `
-    query($owner: String!, $repo: String!, $since: DateTime!) {
+    query($owner: String!, $repo: String!) {
       repository(owner: $owner, name: $repo) {
         pullRequests(
           first: 100
@@ -92,7 +92,6 @@ async function fetchMergedPRs(
   const response = await gql<PRResponse>(query, {
     owner: config.owner,
     repo: config.repo,
-    since: since.toISOString(),
   });
 
   return response.repository.pullRequests.nodes
@@ -146,10 +145,10 @@ async function isFirstTimeContributor(
   gql: typeof graphql,
   config: Config,
   author: string,
-  mergedAt: string
+  _mergedAt: string
 ): Promise<boolean> {
   const query = `
-    query($owner: String!, $repo: String!, $author: String!, $before: DateTime!) {
+    query($owner: String!, $repo: String!, $author: String!) {
       repository(owner: $owner, name: $repo) {
         pullRequests(
           first: 1
@@ -167,7 +166,6 @@ async function isFirstTimeContributor(
       owner: config.owner,
       repo: config.repo,
       author,
-      before: mergedAt,
     });
 
     // If they have exactly 1 merged PR total, this is their first
