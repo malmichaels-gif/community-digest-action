@@ -12,6 +12,12 @@ Posts a clean weekly digest to **GitHub Discussions** so your community stays in
 - **Drop-in** GitHub Action (copy/paste and go)
 - Shoutouts for new contributors (because people are the point)
 
+<p align="center">
+  <img src="docs/images/digest-discussion.png" alt="Example weekly digest post created by the GitHub Action" width="860">
+</p>
+
+*Above: a real digest post from this Action running on [agent-instructions-kit](https://github.com/malmichaels-gif/agent-instructions-kit).*
+
 ---
 
 ## Example Output
