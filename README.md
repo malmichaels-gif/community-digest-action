@@ -156,7 +156,7 @@ It does **not** need admin permissions or issue access. Keep it boring.
 
 ## Contributing
 
-Please do. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Please do. See [CONTRIBUTING.md](CONTRIBUTING.md). Agent instructions live in [AGENTS.md](AGENTS.md).
 
 ---
 
