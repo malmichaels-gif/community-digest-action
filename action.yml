@@ -1,6 +1,6 @@
 name: 'Community Digest Action'
 description: 'A weekly heartbeat for your repo — posts merged PRs and new contributor shoutouts to GitHub Discussions'
-author: 'HeyTC Labs'
+author: 'HeyTC'
 
 branding:
   icon: 'activity'

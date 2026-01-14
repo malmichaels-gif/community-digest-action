@@ -175,4 +175,4 @@ MIT.
 
 ---
 
-Built by [HeyTC Labs](https://heytc.com)
+Built by HeyTC.
