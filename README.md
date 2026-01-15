@@ -5,6 +5,8 @@
 
 A weekly heartbeat for your repo.
 
+Automates weekly "what happened" posts so contributors feel seen—without you writing newsletters.
+
 Posts a clean weekly digest to **GitHub Discussions** so your community stays in the loop without you playing newsletter editor.
 
 - **No-AI required** (default)
